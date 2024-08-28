@@ -1,0 +1,46 @@
+/* nav{
+    width: 100%;
+    background-color: var(--dark-mode-elements);
+    display: flex;
+    justify-content: space-between;
+    padding: 0.5rem 4rem;
+    align-items: center ;
+}
+
+.mode{
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+} */
+
+/* Navbar.module.css */
+
+nav {
+  width: 100%;
+  background-color: var(--element-color);
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem 4rem;
+  align-items: center;
+}
+
+.mode {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 768px) {
+    nav{
+        display: flex;
+        gap: 2em;
+        padding: 1em 1.5em;
+    }
+
+    nav h2{
+        font-size: 1.2em;
+    }
+}
+
+
