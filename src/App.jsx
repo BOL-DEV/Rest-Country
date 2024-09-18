@@ -13,10 +13,10 @@ import "./App.css";
 
 import "./App.css";
 
-const url = `http://localhost:9000/countries`;
+const url = `/data.json`;
 
 const initialState = {
-  countries: [],
+  // countries: [],
   filteredCountries: [],
   status: "loading",
   selectedRegion: "All",
@@ -68,7 +68,7 @@ const reducer = (state, action) => {
 
 const App = () => {
   const [
-    { countries, filteredCountries, selectedRegion, isLoading },
+    {  filteredCountries, selectedRegion, isLoading },
     dispatch,
   ] = useReducer(reducer, initialState);
 
@@ -78,6 +78,7 @@ const App = () => {
       try {
         const res = await fetch(url);
         const data = await res.json();
+        // console.log(data)
         dispatch({ type: "dataReceived", payload: data });
       } catch (error) {
         dispatch({ type: "dataFailed" });
