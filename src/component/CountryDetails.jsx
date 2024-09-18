@@ -3,6 +3,7 @@ import styles from "./CountryDetails.module.css";
 
 const CountryDetails = ({ countries }) => {
   const { countryCode } = useParams();
+
   const country = countries.find((c) => c.alpha3Code === countryCode);
 
   const navigate = useNavigate();

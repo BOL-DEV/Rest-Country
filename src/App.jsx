@@ -16,7 +16,7 @@ import "./App.css";
 const url = `/data.json`;
 
 const initialState = {
-  // countries: [],
+  countries: [],
   filteredCountries: [],
   status: "loading",
   selectedRegion: "All",
@@ -79,7 +79,7 @@ const App = () => {
         const res = await fetch(url);
         const data = await res.json();
         // console.log(data)
-        dispatch({ type: "dataReceived", payload: data });
+        dispatch({ type: "dataReceived", payload: data.countries });
       } catch (error) {
         dispatch({ type: "dataFailed" });
       }
